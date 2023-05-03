@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+}
+
+.btnMenu{
+    background: none;
+    
+    border: none;
+
+    font: inherit;
+    font-size: 2rem;
+    
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+    padding-block: 1.6rem;
+    margin-right: 2rem;
+    
+    cursor: pointer;
+}
+
+.hamburger{
+    border-top: 0.2rem solid;
+    
+    width: 2rem;
+    
+    transition: 0.5s;
+}
+
+.hamburger::before,
+.hamburger::after{
+    content: "";
+
+    display: block;
+
+    width: 2rem;
+    height: 0.2rem;
+
+    margin-top: 0.4rem;
+
+    background: currentColor;
+
+    transition: 0.5s;
+
+    position: relative;
+}
+
+#menu header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.material-icons-sharp{
+    width: 3rem;
+}
+
+header #menu{
+    width: 70%;
+
+    position: absolute;
+    left: -70%;
+    top: 0%;
+    z-index: 2;
+}
+
+.active{
+    left: 0% !important;
+}
+
+header nav a{
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header nav h3{
+    display: inline;
+}

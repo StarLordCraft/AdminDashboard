@@ -8,12 +8,15 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
       rel="stylesheet">
+
+      <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
             <button class="btnMenu"
-            aria-label="Abrir Controles"
+            id="open-menu"
+            aria-label="Abrir Menu"
             aria-haspopup="true"
             aria-controls="menu"
             aria-expanded="false"
@@ -21,13 +24,24 @@
             <span class="hamburger"></span>
             </button>
 
-            <section id="menu">
+            <section id="menu"
+            >
                 <header>
-                    LOGO
-                    <span class="material-icons-sharp"
-                    id="close-menu">
-                        close
-                    </span>
+
+                    <h1>LOGO</h1>
+
+                    <button class="btnMenu"
+                    id="close-menu"
+                    aria-label="Fechar Menu"
+                    aria-haspopup="true"
+                    aria-controls="menu"
+                    aria-expanded="true">
+
+                        <span class="material-icons-sharp">
+                            close
+                        </span>
+
+                    </button>
                 </header>
                 
                 <div class="menucontent">
@@ -87,18 +101,24 @@
                         <h3>Add Product</h3>
                     </a>
                 </div>
-            </section>
 
-            <footer>
-                <a href="#">
-                    <span class="material-icons-sharp">
-                        logout
-                    </span>
-                    <h3>Logout</h3>
-                </a>
-            </footer>
+
+                <footer>
+                    <a href="#">
+                        <span class="material-icons-sharp">
+                            logout
+                        </span>
+                        <h3>Logout</h3>
+                    </a>
+                </footer>
+            </section>
         </nav>
     </header>
-    <main></main>
+
+    <main>
+
+    </main>
+
+    <script type="module" src="main.js"></script>
 </body>
 </html>
