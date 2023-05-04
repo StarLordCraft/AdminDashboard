@@ -24,97 +24,106 @@
             <span class="hamburger"></span>
             </button>
 
-            <section id="menu">
-                <header>
-                    
-                    <h1>
-                        <img src="./assets/logo.jpg">
-                        RAFAEL ALVES
-                    </h1>
+            <div class="user-especs">
+                <button class="theme-toggle">
 
-                    <button class="btnMenu"
-                    id="close-menu"
-                    aria-label="Fechar Menu"
-                    aria-haspopup="true"
-                    aria-controls="menu"
-                    aria-expanded="true">
+                </button>
 
-                        <span class="material-icons-sharp">
-                            close
-                        </span>
+                <img>
 
-                    </button>
-                </header>
-                
-                <div class="menucontent">
-                    <a href="#" class="focus">
-                        <span class="material-icons-sharp">
-                            dashboard
-                        </span>
-                        <h3>Dashboard</h3>
-                    </a>
-                    <a href="#">
-                        <span class="material-icons-sharp">
-                            person_outlined
-                        </span>
-                        <h3>Customers</h3>
-                    </a>
-                    <a href="#">
-                        <span class="material-icons-sharp">
-                            receipt_long
-                        </span>
-                        <h3>Orders</h3>
-                    </a>
-                    <a href="#">
-                        <span class="material-icons-sharp">
-                            insights
-                        </span>
-                        <h3>Analytics</h3>
-                    </a>
-                    <a href="#">
-                        <span class="material-icons-sharp">
-                            mail_outline
-                        </span>
-                        <h3>Messages</h3>
-                        <span class="message-count">26</span>
-                    </a>
-                    <a href="#">
-                        <span class="material-icons-sharp">
-                            inventory
-                        </span>
-                        <h3>Products</h3>
-                    </a>
-                    <a href="#">
-                        <span class="material-icons-sharp">
-                            report_gmailerrorred
-                        </span>
-                        <h3>Reports</h3>
-                    </a>
-                    <a href="#">
-                        <span class="material-icons-sharp">
-                            settings
-                        </span>
-                        <h3>Settings</h3>
-                    </a>
-                    <a href="#">
-                        <span class="material-icons-sharp">
-                            add
-                        </span>
-                        <h3>Add Product</h3>
-                    </a>
-                </div>
-
-
-                <footer>
-                    <a href="#">
-                        <span class="material-icons-sharp">
-                            logout
-                        </span>
-                        <h3>Logout</h3>
-                    </a>
-                </footer>
-            </section>
+            </div>
         </nav>
+        
+        <section id="menu">
+            <header>
+                
+                <h1>
+                    <img src="./assets/logo.jpg">
+                    RAFAEL ALVES
+                </h1>
+
+                <button class="btnMenu"
+                id="close-menu"
+                aria-label="Fechar Menu"
+                aria-haspopup="true"
+                aria-controls="menu"
+                aria-expanded="true">
+
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+
+                </button>
+            </header>
+            
+            <div class="menucontent">
+                <a href="#" class="focus">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        person_outlined
+                    </span>
+                    <h3>Customers</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        receipt_long
+                    </span>
+                    <h3>Orders</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        mail_outline
+                    </span>
+                    <h3>Messages</h3>
+                    <span class="message-count">26</span>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Products</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        settings
+                    </span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>Add Product</h3>
+                </a>
+            </div>
+
+
+            <footer>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </footer>
+        </section>
     </header>
 
     <main>
@@ -136,8 +145,9 @@
                         <h5>50.000$</h5>
                     </div>
                     <div class="insight-progress">
-                        <div class="progress" id="salesBar"></div>
-                        <p id="percentageSales">60%</p>
+                        <div class="progress" id="salesBar">
+                            <p id="percentageSales"></p>
+                        </div>
                     </div>
                 </section>
                 <small class="text-muted">Last 24 Hours</small>
@@ -151,8 +161,9 @@
                         <h2>23.000$</h2>
                     </div>
                     <div class="insight-progress">
-                        <div class="progress" id="expansesBar"></div>
-                        <p id="percentageExpanses">50%</p>
+                        <div class="progress" id="expansesBar">
+                            <p id="percentageExpanses"></p>
+                        </div>
                     </div>
                 </section>
                 <small class="text-muted">Last 24 Hours</small>
@@ -166,14 +177,77 @@
                         <h2>7.000$</h2>
                     </div>
                     <div class="insight-progress">
-                        <div class="progress" id="incomeBar"></div>
-                        <p id="percentageIncome">50%</p>
+                        <div class="progress" id="incomeBar">
+                            <p id="percentageIncome"></p>
+                        </div>
+                        
                     </div>
                 </section>
                 <small class="text-muted">Last 24 Hours</small>
             </div>
         </section>
+
+        <section class="recent-order">
+            <h2> Recent Orders</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Product Number</th>
+                        <th>Payment</th>
+                        <th>status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Foldable Mini Drone</td>
+                        <td>85631</td>
+                        <td>reversal</td>
+                        <td class="danger">payment reversal</td>
+                        <td>Details</td>
+                    </tr>
+                    <tr>
+                        <td>Foldable Mini Drone</td>
+                        <td>85631</td>
+                        <td>Due</td>
+                        <td class="warning">Peding</td>
+                        <td>Details</td>
+                    </tr>
+                    <tr>
+                        <td>Foldable Mini Drone</td>
+                        <td>85631</td>
+                        <td>Due</td>
+                        <td class="success">Complete</td>
+                        <td>Details</td>
+                    </tr>
+                    <tr>
+                        <td>Foldable Mini Drone</td>
+                        <td>85631</td>
+                        <td>Due</td>
+                        <td class="warning">Peding</td>
+                        <td>Details</td>
+                    </tr>
+                    <tr>
+                        <td>Foldable Mini Drone</td>
+                        <td>85631</td>
+                        <td>Due</td>
+                        <td class="warning">Peding</td>
+                        <td>Details</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#">Show All</a>
+        </section>
+
     </main>
+
+    <footer>
+        <header>
+        
+        </header>
+    </footer>
 
     <script type="module" src="main.js"></script>
 </body>

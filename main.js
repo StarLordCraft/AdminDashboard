@@ -1,5 +1,5 @@
 import handleClickOutside from './mobile.js'
-import setProgressBar from './progress_bar.js';
+import setProgressBar from './interactions.js';
 
 function openMenu(event){
     event.preventDefault();

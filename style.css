@@ -72,20 +72,13 @@ h1{
     cursor: pointer;
 }
 
-.btnMenu:first-child{
-    position: fixed;
-    right: 0rem;
-}
-
 .hamburger{
     border-top: 0.2rem solid #000;
     
     width: 2rem;
+    display: block;
     
     transition: 0.5s;
-
-    position: inherit;
-    right: inherit;
 }
 
 .hamburger::before,
@@ -101,13 +94,7 @@ h1{
 
     background: currentColor;
 
-    transition: 0.5s;
-
     position: relative;
-}
-
-body > header{
-    margin-top: 1.4rem;
 }
 
 body > header img{
@@ -122,7 +109,7 @@ header #menu{
     position: fixed;
     left: -70%;
     top: 0%;
-    z-index: 2;
+    z-index: 3;
 
     background-color: white;
 
@@ -144,7 +131,7 @@ header #menu{
     left: 0% !important;
 }
 
-header nav a{
+header #menu a{
     text-decoration: none;
 
     height: 5.18rem;
@@ -162,11 +149,11 @@ header nav a{
     transition: all 300ms ease;
 }
 
-header nav a:hover{
+header #menu a:hover{
     color: var(--color-primary);
 }
 
-header nav a:hover span:first-child{
+header #menu a:hover span:first-child{
     color: var(--color-primary);
 
     font-size: 3rem;
@@ -174,14 +161,14 @@ header nav a:hover span:first-child{
     margin-left: 1rem;
 }
 
-header nav a.focus{
+header #menu a.focus{
     background-color: var(--color);
     color: var(--color-primary);
 
     margin-left: 0;
 }
 
-header nav a.focus::before{
+header #menu a.focus::before{
     content: '';
 
     width: 6px;
@@ -190,25 +177,25 @@ header nav a.focus::before{
     background: var(--color-primary);
 }
 
-header nav a.focus span{
+header #menu a.focus span{
     color: var(--color-primary);
 
     font-size: 3rem;
 }
 
-header nav a span{
+header #menu a span{
     width: 2.4rem;
 
     transition: all 300ms ease;
 }
 
-header nav a h3{
+header #menu a h3{
     display: inline;
 
     font-weight: 500;
 }
 
-header nav a span.message-count{
+header #menu a span.message-count{
     background: var(--color-danger);
     color: #fff;
 
@@ -301,6 +288,8 @@ main .insights{
 
     border-radius: 100%;
 
+    position: relative;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -315,6 +304,118 @@ main .insights{
     height: 8rem;
 
     border-radius: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.progress p{
+    position: absolute;
+    z-index: 2;
+}
+
+.insight-card small{
+    display: block;
+    margin-top: 3rem;
+}
+
+.recent-order{
+    margin-top: 2.8rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.recent-order h2{
+    margin-bottom: 1.1rem;
+}
+
+.recent-order table{
+    background: white;
+    
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    
+    padding: var(--card-padding);
+    
+    text-align: center;
+    
+    transition: all 300ms ease;
+
+    display: block;
+    position: relative;
+
+    width: 90%;
+
+    margin: 0 auto;
+}
+
+.recent-order table:hover{
+    box-shadow: var(--box-shadow-card-hover);
+}
+
+.recent-order table thead{
+    float: left;
+
+    text-align: center;
+
+}
+
+.recent-order table tbody{
+    width: auto;
+    
+    position: relative;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    
+    white-space: nowrap;
+}
+
+.recent-order table thead,
+.recent-order table tbody,
+.recent-order table th,
+.recent-order table td,
+.recent-order table tr{
+    display: block;
+}
+
+.recent-order table  tr td,
+.recent-order table tr th{
+    height: 3.5rem;
+}
+
+.recent-order tbody tr {
+    display: inline-block;
+  }
+
+.recent-order table tbody td{
+    height: 3.5rem;
+
+    border-bottom: 1px solid var(--color);
+
+    color: #677483;
+}
+
+.recent-order table tbody td:last-child{
+    color: var(--color-primary);
+}
+
+.recent-order table tbody tr:last-child td{
+    border: none;
+}
+
+.recent-order a {
+    text-decoration: none;
+    text-align: center;
+
+    color: var(--color-primary);
+
+    display: flex;
+    justify-content: center;
+
+    cursor: pointer;
 }
 
 .profile-photo{
@@ -328,4 +429,15 @@ main .insights{
 
 .text-muted{
     color: #7d8da1;
+}
+
+.warning{
+    color: var(--color-warning) !important;
+}
+
+.danger{
+    color: var(--color-danger) !important;
+}
+.success{
+    color: var(--color-succes) !important;
 }
