@@ -3,14 +3,14 @@ import setProgressBar from './interactions.js';
 
 function openMenu(event){
     event.preventDefault();
-    menu.classList.add('active');
+    menu.classList.add('open');
 
     handleClickOutside(header, closeMenu);
 }
 
 function closeMenu(event){
     event.preventDefault()
-    menu.classList.remove('active');
+    menu.classList.remove('open');
 }
 
 
