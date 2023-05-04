@@ -118,7 +118,61 @@
     </header>
 
     <main>
+        <h1>DashBoard</h1>
 
+        <div class="date">
+            <input type="date" name="" id="">
+        </div>
+
+        <section class="insights">
+
+            <div class="insight-card">
+                <span class="material-icons-sharp">analytics</span>
+                <section class="insight-content">
+                    <div class="insight-info">
+                        <h3>Total Sales</h3>
+                        <h2 id="sales">30.000$</h2>
+                        <h6>Meta:</h6>
+                        <h5>50.000$</h5>
+                    </div>
+                    <div class="insight-progress">
+                        <div class="progress" id="salesBar"></div>
+                        <p id="percentageSales">60%</p>
+                    </div>
+                </section>
+                <small class="text-muted">Last 24 Hours</small>
+            </div>
+
+            <div class="insight-card">
+                <span class="material-icons-sharp">bar_chart</span>
+                <section class="insight-content">
+                    <div class="insight-info">
+                        <h3>Total <br/>Expanses</h3>
+                        <h2>23.000$</h2>
+                    </div>
+                    <div class="insight-progress">
+                        <div class="progress" id="expansesBar"></div>
+                        <p id="percentageExpanses">50%</p>
+                    </div>
+                </section>
+                <small class="text-muted">Last 24 Hours</small>
+            </div>
+
+            <div class="insight-card">
+                <span class="material-icons-sharp">stacked_line_chart</span>
+                <section class="insight-content">
+                    <div class="insight-info">
+                        <h3>Total <br/>Income</h3>
+                        <h2>7.000$</h2>
+                    </div>
+                    <div class="insight-progress">
+                        <div class="progress" id="incomeBar"></div>
+                        <p id="percentageIncome">50%</p>
+                    </div>
+                </section>
+                <small class="text-muted">Last 24 Hours</small>
+            </div>
+        </section>
     </main>
 
     <script type="module" src="main.js"></script>
