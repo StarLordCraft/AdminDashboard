@@ -1,9 +1,6 @@
 import handleClickOutside from './mobile.js'
 
-function openMenu(event){
-    event.preventDefault();
-
-    
+function openMenu(){
     menu.classList.add('active');
 
     handleClickOutside(header, closeMenu);
