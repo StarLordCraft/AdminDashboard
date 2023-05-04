@@ -46,30 +46,74 @@ body{
     overflow-x: hidden;
 }
 
-h1{
-    font-size: 1.8rem;
-    font-weight: 800;
-    
+body > header{
     display: flex;
-    gap: 1.3rem;
+    justify-content: center;
+}
+
+header nav{
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+
+    box-shadow: var(--box-shadow);
+
+    border-radius: var(--card-border-radius);
+
+    width: 90%;
+
+    position: fixed;
+    z-index: 4;
+
+    background-color: #fff;
 }
 
 .btnMenu{
     background: none;
     
     border: none;
-
+    
     font: inherit;
     font-size: 2rem;
-    
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
     
     padding-block: 1.6rem;
     
     cursor: pointer;
+}
+
+header nav .btnMenu{
+    margin-left: 3rem;
+}
+
+header nav button{
+    border: none;
+    background-color: transparent;
+}
+
+.user-specs{
+    display: flex;
+    gap: 1rem
+}
+
+.profile{
+    display: flex;
+}
+
+#username,
+#usertype{
+    display: none;
+}
+
+
+.profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    margin-right: 3rem;
 }
 
 .hamburger{
@@ -86,18 +130,27 @@ h1{
     content: "";
 
     display: block;
-
+    
     width: 2rem;
     height: 0.2rem;
-
+    
     margin-top: 0.5rem;
-
+    
     background: currentColor;
-
+    
     position: relative;
 }
 
-body > header img{
+header h1{
+    font-size: 1.8rem;
+    font-weight: 800;
+    
+    display: flex;
+    gap: 1.3rem;
+    align-items: center;
+}
+
+#menu header img{
     width: 3rem;
     height: 3rem;
 }
@@ -109,7 +162,7 @@ header #menu{
     position: fixed;
     left: -70%;
     top: 0%;
-    z-index: 3;
+    z-index: 5;
 
     background-color: white;
 
@@ -135,7 +188,7 @@ header #menu a{
     text-decoration: none;
 
     height: 5.18rem;
-    width: 100%;
+    width: calc(100% - 2.8rem);
 
     margin-left: 2.8rem;
 
@@ -166,6 +219,8 @@ header #menu a.focus{
     color: var(--color-primary);
 
     margin-left: 0;
+
+    width: 100%;
 }
 
 header #menu a.focus::before{
@@ -208,7 +263,7 @@ header #menu a span.message-count{
 }
 
 main{
-    margin-top: 1.4rem;
+    margin-top: 8rem;
 }
 
 main .date{
@@ -418,15 +473,6 @@ main .insights{
     cursor: pointer;
 }
 
-.profile-photo{
-    width: 2.8rem;
-    height: 2.8rem;
-
-    border-radius: 50%;
-
-    overflow: hidden;
-}
-
 .text-muted{
     color: #7d8da1;
 }
@@ -440,4 +486,8 @@ main .insights{
 }
 .success{
     color: var(--color-succes) !important;
+}
+
+.recent-updates{
+    margin-top: 1.4rem;
 }

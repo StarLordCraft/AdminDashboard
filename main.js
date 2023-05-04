@@ -6,13 +6,11 @@ function openMenu(event){
     menu.classList.add('active');
 
     handleClickOutside(header, closeMenu);
-    btnOpenMenu.style.display = 'none';
 }
 
 function closeMenu(event){
     event.preventDefault()
     menu.classList.remove('active');
-    btnOpenMenu.style.display = 'block';
 }
 
 
