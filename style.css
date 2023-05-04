@@ -31,18 +31,27 @@
 
     --card-padding: 1.8rem;
     --padding-1: 1.2rem;
-
+    
     --box-shadow: 0 2rem 3rem var(var(--color));
 }
 
 body{
     font-size: 1.6rem;
     font-family: Poppins, sans-serif;
-
+    
     background: var(--color-background);
-
+    
     user-select: none;
     overflow-x: hidden;
+}
+
+h1{
+    font-size: 1.8rem;
+    font-weight: 800;
+    
+    display: flex;
+    gap: 1.3rem;
+    align-items: center;
 }
 
 .btnMenu{
@@ -148,6 +157,14 @@ header nav a:hover{
     color: var(--color-primary);
 }
 
+header nav a:hover span:first-child{
+    color: var(--color-primary);
+
+    font-size: 3rem;
+
+    margin-left: 1rem;
+}
+
 header nav a.focus{
     background-color: var(--color);
     color: var(--color-primary);
@@ -172,6 +189,8 @@ header nav a.focus span{
 
 header nav a span{
     width: 2.4rem;
+
+    transition: all 300ms ease;
 }
 
 header nav a h3{
@@ -180,13 +199,16 @@ header nav a h3{
     font-weight: 500;
 }
 
-h1{
-    font-size: 1.8rem;
-    font-weight: 800;
-    
+header nav a span.message-count{
+    background: var(--color-danger);
+    color: #fff;
+
     display: flex;
-    gap: 1.3rem;
-    align-items: center;
+    justify-content: center;
+
+    font-size: 1.1rem;
+
+    border-radius: var(--border-radius-1);
 }
 
 .profile-photo{
