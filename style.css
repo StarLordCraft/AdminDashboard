@@ -554,3 +554,88 @@ main .insights{
 
     margin-bottom: 1rem;
 }
+
+.recent-updates .sales-analytics{
+    margin-top: 2.8rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.recent-updates .sales-analytics h2{
+    margin-bottom: 1.1rem;
+}
+
+.recent-updates .sales-analytics .item{
+    background-color: #fff;
+    
+    display: flex;
+    align-items: center;
+    align-self: center;
+    gap: 1.4rem;
+
+    margin-bottom: 0.7rem;
+    padding: 1.4rem var(--card-padding);
+
+    border-radius: var(--border-radius-3);
+    box-shadow: var(--box-shadow);
+
+    transition: all 300ms ease;
+
+    width: 90%;
+}
+
+.recent-updates .sales-analytics .item{
+    box-shadow: var(--box-shadow-card-hover);
+}
+
+.recent-updates .sales-analytics .item .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    
+    width: 100%;
+}
+
+.recent-updates .sales-analytics .item .info h3,
+.recent-updates .sales-analytics .item .info .title small,
+.recent-updates .sales-analytics .item .info h5
+{
+    font-size: clamp(1.2rem, 1rem + 1vw, 1.9rem);
+}
+
+.recent-updates .sales-analytics .item span{
+    padding: 0.6rem;
+
+    color: #fff;
+
+    border-radius: 100%;
+}
+
+.recent-updates .sales-analytics .item.online span{
+    background-color: var(--color-primary);
+}
+
+.recent-updates .sales-analytics .item.offline span{
+    background-color: var(--color-danger);
+}
+
+.recent-updates .sales-analytics .item.customers span{
+    background-color: var(--color-succes);
+}
+
+.recent-updates .sales-analytics .add-product{
+    background: transparent;
+
+    border: 2px dashed var(--color-primary);
+    
+    color: var(--color-primary);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recent-updates .sales-analytics .add-product span{
+    color: var(--color-primary);
+}
