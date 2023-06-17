@@ -1,5 +1,6 @@
 import handleClickOutside from './mobile.js'
 import setProgressBar from './interactions.js';
+import darkMode from './darkMode.js';
 
 function openMenu(event){
     event.preventDefault();
@@ -44,8 +45,7 @@ const expanses = eval(document.querySelector('.insight-card:nth-child(2) .insigh
 const percentageExpanses = document.getElementById('percentageExpanses')
 
 const incomeBar = document.getElementById('incomeBar');
-const income = eval(document.querySelector('.insight-card:nth-child(3) .insight-info > h2').innerHTML.split('.')[0].concat
-(document.querySelector('.insight-info:nth-child(1) > h2').innerHTML.split('.')[1].split('$')[0]));
+const income = sales - expanses;
 const percentageIncome = document.getElementById('percentageIncome')
 
 //to be done = set create a way to change the income value dinamically.
@@ -58,3 +58,10 @@ setProgressBar(incomeBar, percentageIncome, income, sales, '#41f1b6', '#ff7782')
 
 
 //=========================================END OF BAR INTERATIONS==============================================================
+
+const toggleThemeBtn = document.querySelector('.theme-toggle');
+toggleThemeBtn.addEventListener('click', darkMode);
+toggleThemeBtn.addEventListener('touchstart', (event) => {
+    event.preventDefault();
+    darkMode();
+})

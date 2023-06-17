@@ -12,16 +12,17 @@
 :root{
     font-size: 62.5%;
 
+    --color-text: #000;
+    --color-white: #fff;
     --color-primary: #7380ec;
     --color-danger: #ff7782;
     --color-succes: #41f1b6;
     --color-warning: #ffbb55;
     --color-info: #dce1eb;
-    /*--color-info-dark: #7d8da1*/
+    --color-info-dark: #7d8da1;
     --color: rgba(132, 139, 200, 0.18);
-    /*--color-dark: #363949*/
-    --color-variant: #111e88;
-    /*--color-dark-variant: #677483*/
+    --color-dark: #363949;
+    --color-dark-variant: #677483;
     --color-background: #f6f6f9;
 
     --card-border-radius: 2rem;
@@ -29,14 +30,31 @@
     --border-radius-2: 0.4rem;
     --border-radius-3: 0.4rem;
 
-    --card-padding: 1.8rem;
+    --card-padding: 1.4rem;
     --padding-1: 1.2rem;
     
     --box-shadow: 0 2rem 3rem var(--color);
-    --box-shadow-card-hover: 0 0 1rem #000;
+}
+
+body.dark{
+    --color-text: #fff;
+    --color-white: #000000;
+    --color-primary: #7380ec;
+    --color-danger: #ff7782;
+    --color-succes: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-info: #dce1eb;
+    --color-info-dark: #7d8da1;
+    --color: rgb(188, 188, 188);
+    --color-dark: #363949;
+    --color-dark-variant: #677483;
+    --color-background: #141414;
+    --box-shadow: 0 2rem 3rem #1d1c1c;
+    --box-shadow-card-hover: 0 0 1rem #e3dede;
 }
 
 body{
+    color: var(--color-text);
     font-size: 1.6rem;
     font-family: Poppins, sans-serif;
     
@@ -65,7 +83,7 @@ header nav{
     position: fixed;
     z-index: 4;
 
-    background-color: #fff;
+    background-color: var(--color-white);
 }
 
 .btnMenu{
@@ -117,6 +135,10 @@ header nav button{
     border-radius: var(--border-radius-1);
 }
 
+.currentTheme{
+    color: #7380ec !important;
+}
+
 .profile{
     display: flex;
     gap: 2rem;
@@ -141,7 +163,7 @@ header nav button{
 }
 
 .hamburger{
-    border-top: 0.2rem solid #000;
+    border-top: 0.2rem solid var(--color-text);
     
     width: 2rem;
     display: block;
@@ -160,7 +182,7 @@ header nav button{
     
     margin-top: 0.5rem;
     
-    background: currentColor;
+    background: var(--color-text);
     
     position: relative;
 }
@@ -181,17 +203,16 @@ header h1{
 
 header #menu{
     width: 70%;
-    min-height: 96%;
+    min-height: 100%;
 
     position: fixed;
     left: -70%;
     top: 0%;
     z-index: 5;
 
-    background-color: white;
+    background-color: var(--color-white);
 
-    margin-top: 1.4rem;
-
+    box-shadow: var(--box-shadow);
 }
 
 #menu header{
@@ -201,7 +222,7 @@ header #menu{
 }
 
 .menucontent{
-    margin: 3.5rem 0;
+    margin: 0;
 }
 
 .open{
@@ -221,7 +242,7 @@ header #menu a{
     align-items: center;
     gap: 1.4rem;
 
-    color: #363949;
+    color: var(--color-dark);
 
     transition: all 300ms ease;
 }
@@ -236,6 +257,10 @@ header #menu a:hover span:first-child{
     font-size: 3rem;
 
     margin-left: 1rem;
+}
+
+header #menu .menucontent a:last-child{
+    margin-bottom: 8rem;
 }
 
 header #menu a.focus{
@@ -276,7 +301,7 @@ header #menu a h3{
 
 header #menu a span.message-count{
     background: var(--color-danger);
-    color: #fff;
+    color: var(--color-white);
 
     display: flex;
     justify-content: center;
@@ -302,7 +327,7 @@ main .date{
 
 main .date input[type="date"]{
     background: transparent;
-    color: #363949;
+    color: var(--color-dark);
 }
 
 main .insights{
@@ -313,7 +338,7 @@ main .insights{
 }
 
 .insight-card{
-    background: #fff;
+    background: var(--color-white);
 
     padding: var(--card-padding);
     margin: 1rem;
@@ -334,7 +359,7 @@ main .insights{
 
     border-radius: 50%;
 
-    color: #fff;
+    color: var(--color-white);
 
     font-size: 2.8rem;
 }
@@ -354,6 +379,7 @@ main .insights{
 .insight-content{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5rem;
 }
 
@@ -377,7 +403,7 @@ main .insights{
 .progress::before{
     content: "";
 
-    background: #fff;
+    background: var(--color-white);
 
     width: 8rem;
     height: 8rem;
@@ -412,7 +438,7 @@ main .insights{
 }
 
 .recent-order table{
-    background: white;
+    background: var(--color-white);
     
     border-radius: var(--card-border-radius);
     box-shadow: var(--box-shadow);
@@ -474,7 +500,7 @@ main .insights{
 
     border-bottom: 1px solid var(--color);
 
-    color: #677483;
+    color: var(--color-dark-variant);
 }
 
 .recent-order table tbody td:last-child{
@@ -500,7 +526,7 @@ main .insights{
 }
 
 .text-muted{
-    color: #7d8da1;
+    color: var(--color-info-dark);
 }
 
 .warning{
@@ -526,7 +552,7 @@ main .insights{
 }
 
 .recent-updates .updates{
-    background-color: white;
+    background-color: var(--color-white);
 
     padding: var(--card-padding);
 
@@ -567,7 +593,7 @@ main .insights{
 }
 
 .recent-updates .sales-analytics .item{
-    background-color: #fff;
+    background-color: var(--color-white);
     
     display: flex;
     align-items: center;
@@ -585,7 +611,7 @@ main .insights{
     width: 90%;
 }
 
-.recent-updates .sales-analytics .item{
+.recent-updates .sales-analytics .item:hover{
     box-shadow: var(--box-shadow-card-hover);
 }
 
@@ -607,7 +633,7 @@ main .insights{
 .recent-updates .sales-analytics .item span{
     padding: 0.6rem;
 
-    color: #fff;
+    color: var(--color-white);
 
     border-radius: 100%;
 }
@@ -638,4 +664,44 @@ main .insights{
 
 .recent-updates .sales-analytics .add-product span{
     color: var(--color-primary);
+}
+
+@media (min-width: 768px){
+    .date{
+        margin-bottom: 1.5rem;
+    }
+    .insights{
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: auto;
+        width: 80%;
+    }
+    .insight-content{
+        gap: 1rem;
+    }
+    .insight-card{
+        margin: 0;
+        padding: 1rem;
+    }
+    main > h1,
+    section > h2,
+    footer > h2{
+        text-align: center;
+    }
+}
+
+@media (min-width: 1024px){
+    .insights{
+        width: 70%;
+    }
+    .insight-content{
+        gap: 5rem;
+    }
+    .insight-card{
+        padding: var(--card-padding);
+    }
+    .recent-order{
+        width: 80%;
+        margin: auto;
+    }
+    
 }
